@@ -1,25 +1,33 @@
 import 'dart:convert';
 
-class Feeder{
-
+class Feeder {
   String name;
   String email;
-  String password;
-  int city;
+  String city;
   String agency;
 
-  Feeder({required this.name, required this.email, required this.password, required this.city, required this.agency});
+  Feeder(
+      {required this.name,
+      required this.email,
+      required this.city,
+      required this.agency});
 
-   toJson(){
+  toJson() {
     Map<String, dynamic> mappedFeederData = {
       'name': name,
       'email': email,
-      'password': password,
       'city': {'id': city},
-      'agency': agency
+      'agency': agency,
     };
-
     return jsonEncode(mappedFeederData);
   }
 
+  factory Feeder.fromJson(Map<String,dynamic> feeder) {
+    return Feeder(
+      name: feeder['name'],
+      email: feeder['email'],
+      city: feeder['city']['name'],
+      agency: feeder['agency'],
+    );
+  }
 }

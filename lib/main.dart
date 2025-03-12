@@ -32,7 +32,7 @@ class _ProjetosMunicipaisState extends State<ProjetosMunicipais> {
       home: WebSmoothScroll(
         scrollAnimationLength: 750,
         controller: _scrollController,
-        child: AdminPanelScreen(),
+        child: AdminPanelScreen(scrollController: _scrollController),
       ),
     );
   }

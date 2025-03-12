@@ -10,6 +10,8 @@ void main() {
 
   // addMunicipioData();
 
+  getAllFeeders();
+
 }
 
 void fetchMunicipioData() async {
