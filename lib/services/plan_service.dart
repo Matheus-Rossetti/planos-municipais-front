@@ -8,7 +8,6 @@ Future<Plan> fetchPlanData() async{
 
   dynamic jsonData = await http.get(Uri.parse(url));
 
-
   return Plan(
     name: jsonData['name'],
     description: jsonData['description'],

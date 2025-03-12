@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:web_smooth_scroll/web_smooth_scroll.dart';
 
-import 'screens/plan_screen.dart';
+import 'screens/admin_panel_screen.dart';
 
 void main() {
   runApp(ProjetosMunicipais());
@@ -30,11 +30,10 @@ class _ProjetosMunicipaisState extends State<ProjetosMunicipais> {
       title: 'Projetos Municipais',
       debugShowCheckedModeBanner: false,
       home: WebSmoothScroll(
-          scrollAnimationLength: 750,
-          controller: _scrollController,
-          child: PlanScreen(
-            scrollController: _scrollController,
-          )),
+        scrollAnimationLength: 750,
+        controller: _scrollController,
+        child: AdminPanelScreen(),
+      ),
     );
   }
 }
